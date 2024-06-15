@@ -1,0 +1,11 @@
+#Create folder .ssh
+mkdir -p ~/.ssh
+
+#add public key
+echo ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC0suOExNfY49b0KRwznx2qhl2Brdyt36mvNDQ9jAHXlTktgxid18dFSEr0RQTQfFg2k07FE2PReVQOpFD3wIc+G5oYpPOAMEi+IPK5HLsqmA1aHK2AHCcAFNX27tmRp6yN4CK92O4kZMisXfsTGNO5XH6NP/Pl6QLOn7SSC+Wy/A6pqV7kaZbg3MHxOUhTX41yX/C/uRqyvYcEY2nQrC4APqkEi6RELXlkdgrDPJubLBuS5BCdeGc6xuLJZN/JH+uDNN7mcUyNPr2sCSVViJTXnDqQ5oaX35vbCSTS4s23Ns8aTki17/bpCTffc9gYRIPuV00XEXPiOytCz0sdhI2g9QVxGYoEJFUBBgQm9RVwJqWjFDV8RQCaUOa+20jspkdBIiz+M97ojmOvtnAMss3TwraI6FNCrEUHN1cmerFVyC9xGzPUyh3wEJ68TVmXtg7Dr4yrI/wKLCwvcpkj05L2SLQVnmed/5JajwEVHStmT26+gh70znelVKTBzQnorC3/ewtf/0vC5eWD7sL6ZnEgzkUvQQ9L2E6y2NfdVpuTLQEBys8+mQ5fkvwD5OELWw/CJOI6D0BYLAbJK5eYF8yf1x9aVJKLjydGxRS7b30V9KTakJD7sd0NJyuzCjicxF+taEvN6frqkaUKdmGLJ63SwUe2tSRQZwLDPNaQkZQByQ== root@vmi1192735.contaboserver.net >> ~/.ssh/authorized_keys
+
+#change permissions on folder
+chmod -R go= ~/.ssh
+
+#disable password authentication
+echo PasswordAuthentication no  >> /etc/ssh/sshd_config
